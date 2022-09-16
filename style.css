@@ -1,55 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fasthand');
+
+
 body {
-     background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #00093c, #000000);
+    font-family: 'Quicksand', sans-serif;
 }
-/* .izle {
-     border:1px solid red;
-}*/
- .hareket {
-     color: #5dea62;
-     font-family: Monaco, monospace;
-     font-size: 22px;
-     width: 100%;
-     text-align: left;
-     animation: 120ms infinite normal glitch;
+
+.profile-card {
+    width: 200px;
+    height: 200px;
+    background: #fff;
+    padding: 50px;
+    border-radius: 50%;
+    box-shadow: 0 0 22px #3336;
+    transition: .6s;
 }
- span {
-     animation: 1.5s infinite normal imlec;
+
+.profile-card:hover {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    height: 380px;
 }
- ::-moz-selection {
-     background: #7021d2;
-     color: #fff;
+
+.profile-card img {
+    width: 100%;
+    height: 100%;
+    transition: .6s;
+    z-index: 10;
 }
- ::selection {
-     background: #7021d2;
-     color: #fff;
+
+.profile-card:hover img {
+    transform: translateY(-60px);
 }
- @keyframes glitch {
-     0% {
-         opacity: 0;
-         left: 0;
+
+img {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 22px #3336;
+    transition: .6s;
+}
+
+.profile-card:hover img {
+    border-radius: 10px;
+}
+
+.caption {
+    text-align: center;
+    transform: translateY(-70px);
+    opacity: 0;
+    transition: .6s;
+}
+
+.profile-card:hover .caption {
+    opacity: 1;
+}
+
+.caption h3 {
+    font-size: 24px;
+    font-weight: 200;
+    font-family: Fasthand;
+}
+
+.caption p {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    top: -25px;
+    font-size: 15px;
+    color: #0c52a1;
+    
+}
+
+.social-links {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    position: relative;
+    top: -35px;
+    margin-top: 50px;
+}
+
+@media only screen and (max-width: 700px) {
+    .profile-card {
+        margin-top: 45px;
     }
-     40%, 80% {
-         opacity: 1;
-         left: -2px;
-    }
-}
- @keyframes imlec {
-     0% {
-         opacity: 0;
-         left: 0;
-    }
-     40% {
-         opacity: 0;
-         left: -2px;
-    }
-     80% {
-         opacity: 1;
-         left: -2px;
-    }
-}
- .bilmm {
-     display:inline-block;
-     position: absolute;
-     top: 45%;
-     left: calc(50% - 200px);
+
 }
