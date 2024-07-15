@@ -1,90 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>IAM Ravi</title>
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ravishan Premerathne - Full-stack Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap');
 
-    <link rel="icon" href="https://media-exp1.licdn.com/dms/image/C5603AQF9aC8OqJzC7g/profile-displayphoto-shrink_400_400/0/1659021815899?e=1668643200&v=beta&t=UdQ2dIpNS8g8mBiPV81D6sNOeNaeUDCarVPUOiEHMIE">
-    <link rel="stylesheet" href="./style.css" />
-    <meta name="keywords" content="ravisahn, ravishan premerathne, premerathne, uiux deigner, full stack,full stack ,developer, sri lanka">
+        :root {
+            --primary-color: #8b4513;
+            --secondary-color: #f4f1e4;
+            --text-color: #333;
+            --accent-color: #d2b48c;
+        }
 
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
 
-<!-- card -->
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border: 1px solid #d3d3d3;
+            transition: transform 0.3s ease;
+        }
 
-<meta property="og:type" content="article" />
-<meta property="og:title" content="Ravishan Premerathne" />
-<meta property="og:description" content="Full-stack Developer Freelancer | UI/ UX Designer | Digital Marketer | SEO Consultant" />
-<meta property="og:url" content="https://ravishan.me/" />
-<meta property="og:image" content="https://media-exp1.licdn.com/dms/image/C5603AQF9aC8OqJzC7g/profile-displayphoto-shrink_400_400/0/1659021815899?e=1668643200&v=beta&t=UdQ2dIpNS8g8mBiPV81D6sNOeNaeUDCarVPUOiEHMIE" />
+        .container:hover {
+            transform: translateY(-5px);
+        }
 
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 2px solid var(--primary-color);
+        }
 
-  </head>
-  <body>
-    <!-- partial:index.partial.html -->
-    <script src="script.js"></script>
-    <div class="profile-card">
-      <div class="img">
-        <img
-          src="./ravishan.jpg"
-          oncontextmenu="return false"
-        />
-      </div>
-      <div class="caption">
-        <h3>Ravishan Premerathne</h3>
-        <p>Full-Stack Developer</p>
-        <p>
-          I'm passionate about tech, design, art, traveling, running and
-          photography.
-        </p>
-        <div class="social-links">
-          <a href="https://github.com/ravishan123" target="_blank"
-            ><lottie-player
-              src="https://assets9.lottiefiles.com/packages/lf20_6HFXXE.json"
-              background="transparent"
-              speed="1"
-              style="width: 30px; height: 30px"
-              loop
-              autoplay
-            ></lottie-player
-          ></a>
-          <a href="https://wa.link/cv5u6h" target="_blank"
-            ><lottie-player
-              src="https://assets9.lottiefiles.com/private_files/lf30_5aaqwx9g.json"
-              background="transparent"
-              speed="1"
-              style="width: 30px; height: 30px"
-              loop
-              autoplay
-            ></lottie-player
-          ></a>
-          <a href="https://www.instagram.com/its.amigos.ig/" target="_blank"
-            ><lottie-player
-              src="https://assets8.lottiefiles.com/packages/lf20_xo8wvxxz.json"
-              background="transparent"
-              speed="1"
-              style="width: 30px; height: 30px"
-              loop
-              autoplay
-            ></lottie-player
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/ravishan-premerathne-5abb071a6"
-            target="_blank"
-            ><lottie-player
-              src="https://assets10.lottiefiles.com/packages/lf20_0Cm1Y2.json"
-              background="transparent"
-              speed="1"
-              style="width: 30px; height: 30px"
-              loop
-              autoplay
-            ></lottie-player
-          ></a>
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8em;
+            margin: 0;
+            color: var(--primary-color);
+            transition: color 0.3s ease;
+        }
+
+        .header h1:hover {
+            color: var(--accent-color);
+        }
+
+        .header p {
+            font-size: 1.2em;
+            margin: 10px 0 0;
+            color: var(--text-color);
+        }
+
+        .navbar {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: var(--primary-color);
+            text-decoration: none;
+            padding: 8px 15px;
+            margin: 0 5px;
+            border: 1px solid var(--primary-color);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .navbar a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: var(--primary-color);
+            transition: all 0.3s ease;
+            z-index: -1;
+        }
+
+        .navbar a:hover {
+            color: #fff;
+        }
+
+        .navbar a:hover::before {
+            left: 0;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            border-bottom: 1px solid var(--primary-color);
+            padding-bottom: 5px;
+        }
+
+        .section ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .section ul li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        .section ul li::before {
+            content: '•';
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+        }
+
+        .project {
+            background-color: #f9f8f3;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #d3d3d3;
+            transition: all 0.3s ease;
+        }
+
+        .project:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .project h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        .project a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .project a:hover {
+            color: var(--accent-color);
+        }
+
+        .contact-info {
+            text-align: center;
+            font-style: italic;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            border-top: 2px solid var(--primary-color);
+            font-size: 0.9em;
+            color: var(--text-color);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            color: var(--primary-color);
+            font-size: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+            transform: scale(1.2) rotate(5deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ravishan Premerathne</h1>
+            <p>React | Node.js | Full-stack Developer</p>
+            <div class="social-links">
+                <a href="https://github.com/ravishan123" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://wa.link/cv5u6h" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/its.amigos.ig/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/ravishan-premerathne-5abb071a6" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://medium.com/@ravishan540" target="_blank"><i class="fab fa-medium"></i></a>
+            </div>
         </div>
-      </div>
+        <div class="navbar">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div id="about" class="section">
+            <h2>About Me</h2>
+            <p>Hello! I'm Ravishan Premerathne, a passionate full-stack developer with expertise in React, Node.js, and various other technologies. I thrive on creating innovative solutions and have a strong background in software engineering with a focus on user experience and efficient functionality.</p>
+        </div>
+        <div id="experience" class="section">
+            <h2>Experience</h2>
+            <ul>
+                <li><strong>Associate Software Engineer</strong> at SmashTaps <br>Sep 2023 - Present · 11 months</li>
+                <li><strong>Associate Software Engineer - Consultant</strong> at SmashTaps <br>Feb 2023 - Nov 2023 · 10 months</li>
+                <li><strong>Intern Full-stack Developer</strong> at SmashTaps <br>Jul 2021 - Feb 2023 · 1 year 8 months</li>
+            </ul>
+        </div>
+        <div id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Otterz – Businesses Banking application</h3>
+                <p>A business banking and payments solution application for freelancers and small businesses. Includes features such as Payments, Card Payments, Invoicing, and Role-based Access Control.</p>
+                <p>Technologies: ReactJs, AWS CDK</p>
+                <a href="https://www.otterz.co" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <h3>Molly - Applicant Tracking system</h3>
+                <p>Applicant Tracking recruitment tool tailored for startups. Users can post jobs, design customized screening processes, and track candidates seamlessly through the recruitment pipeline.</p>
+                <p>Technologies: ReactJs, AWS CDK, NextJs</p>
+                <a href="https://app.hellomolly.io/" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <h3>Final Year Project - Real Estate Management via a Decentralized Blockchain Platform</h3>
+                <p>Technologies: ReactJs, Firebase, Hardhat, Solidity</p>
+            </div>
+            <div class="project">
+                <h3>Food recipe recommending mobile application</h3>
+                <p>Technologies: React Native, TensorFlow, Python, Django framework</p>
+            </div>
+            <div class="project">
+                <h3>Shared Printer</h3>
+                <p>A concurrent approach to implement a printing system using FSP design methods and Java concurrency concepts.</p>
+                <p>Technologies: FSP, Java</p>
+            </div>
+            <div class="project">
+                <h3>Cost Minimized Healthy Diet Plan</h3>
+                <p>A discrete optimization linear approach to present a customized Sri Lankan healthy diet plan with minimized cost for men, women, and children.</p>
+                <p>Technologies: Python</p>
+            </div>
+            <div class="project">
+                <h3>Financial calculator</h3>
+                <p>Technologies: Java, JavaFX</p>
+            </div>
+        </div>
+        <div id="contact" class="section contact-info">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:ravishan540@gmail.com">ravishan540@gmail.com</a></p>
+            <p>Phone: +94728268717</p>
+            <p>Address: 324/7 Biyagama Rd, Pattiya, Kelaniya, Sri Lanka</p>
+            <p>GitHub: <a href="https://github.com/ravishan123/" target="_blank">https://github.com/ravishan123/</a></p>
+        </div>
+        <div class="footer">
+            <p>&copy; 2024 Ravishan Premerathne | <a href="mailto:ravishan540@gmail.com">ravishan540@gmail.com</a></p>
+        </div>
     </div>
 
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <!-- partial -->
-  </body>
+    <script>
+        // Intersection Observer for fade-in effect
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
 </html>
