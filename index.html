@@ -6,194 +6,107 @@
     <title>Ravishan Premerathne - Full-stack Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap');
-
-        :root {
-            --primary-color: #8b4513;
-            --secondary-color: #f4f1e4;
-            --text-color: #333;
-            --accent-color: #d2b48c;
-        }
-
         body {
-            font-family: 'Source Sans Pro', sans-serif;
+            font-family: 'Courier New', monospace;
             margin: 0;
             padding: 0;
-            background-color: var(--secondary-color);
-            color: var(--text-color);
+            background-color: #f4f1e4;
+            color: #333;
             line-height: 1.6;
         }
-
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
             background-color: #fff;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
             border: 1px solid #d3d3d3;
-            transition: transform 0.3s ease;
         }
-
-        .container:hover {
-            transform: translateY(-5px);
-        }
-
         .header {
             text-align: center;
             padding: 40px 0;
-            border-bottom: 2px solid var(--primary-color);
+            border-bottom: 2px solid #333;
         }
-
         .header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.8em;
+            font-size: 2.5em;
             margin: 0;
-            color: var(--primary-color);
-            transition: color 0.3s ease;
+            color: #8b4513;
         }
-
-        .header h1:hover {
-            color: var(--accent-color);
-        }
-
         .header p {
             font-size: 1.2em;
             margin: 10px 0 0;
-            color: var(--text-color);
+            color: #666;
         }
-
         .navbar {
             margin: 20px 0;
             text-align: center;
         }
-
         .navbar a {
-            color: var(--primary-color);
+            color: #8b4513;
             text-decoration: none;
-            padding: 8px 15px;
+            padding: 5px 10px;
             margin: 0 5px;
-            border: 1px solid var(--primary-color);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
+            border: 1px solid #8b4513;
+            transition: background-color 0.3s;
         }
-
-        .navbar a::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background-color: var(--primary-color);
-            transition: all 0.3s ease;
-            z-index: -1;
-        }
-
         .navbar a:hover {
+            background-color: #8b4513;
             color: #fff;
         }
-
-        .navbar a:hover::before {
-            left: 0;
-        }
-
         .section {
             margin-bottom: 40px;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
         }
-
-        .section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
         .section h2 {
-            font-family: 'Playfair Display', serif;
-            color: var(--primary-color);
-            border-bottom: 1px solid var(--primary-color);
+            color: #8b4513;
+            border-bottom: 1px solid #8b4513;
             padding-bottom: 5px;
         }
-
         .section ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-
-        .section ul li {
-            position: relative;
+            list-style-type: square;
             padding-left: 20px;
-            margin-bottom: 10px;
         }
-
-        .section ul li::before {
-            content: '•';
-            color: var(--primary-color);
-            position: absolute;
-            left: 0;
-        }
-
         .project {
             background-color: #f9f8f3;
-            padding: 20px;
+            padding: 15px;
             margin-bottom: 20px;
             border: 1px solid #d3d3d3;
-            transition: all 0.3s ease;
         }
-
-        .project:hover {
-            transform: scale(1.02);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
         .project h3 {
-            font-family: 'Playfair Display', serif;
-            color: var(--primary-color);
+            color: #8b4513;
             margin-top: 0;
         }
-
         .project a {
-            color: var(--primary-color);
+            color: #8b4513;
             text-decoration: none;
             font-weight: bold;
-            transition: color 0.3s ease;
         }
-
         .project a:hover {
-            color: var(--accent-color);
+            text-decoration: underline;
         }
-
         .contact-info {
             text-align: center;
             font-style: italic;
         }
-
         .footer {
             text-align: center;
             padding: 20px 0;
-            border-top: 2px solid var(--primary-color);
+            border-top: 2px solid #333;
             font-size: 0.9em;
-            color: var(--text-color);
+            color: #666;
         }
-
         .social-links {
             display: flex;
             justify-content: center;
             margin-top: 20px;
         }
-
         .social-links a {
             margin: 0 10px;
-            color: var(--primary-color);
+            color: #8b4513;
             font-size: 24px;
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease;
         }
-
         .social-links a:hover {
-            color: var(--accent-color);
-            transform: scale(1.2) rotate(5deg);
+            transform: scale(1.2);
         }
     </style>
 </head>
@@ -276,20 +189,5 @@
             <p>&copy; 2024 Ravishan Premerathne | <a href="mailto:ravishan540@gmail.com">ravishan540@gmail.com</a></p>
         </div>
     </div>
-
-    <script>
-        // Intersection Observer for fade-in effect
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.section').forEach(section => {
-            observer.observe(section);
-        });
-    </script>
 </body>
 </html>
